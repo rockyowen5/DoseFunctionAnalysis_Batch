@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE7C62B7-7653-4563-AC5C-B4EB4B5EEFE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DFHAnalysis</RootNamespace>
+    <AssemblyName>DFH Analysis - Batch - PRM.esapi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VMS.TPS.Common.Model.API, Version=13.6.30.20230, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Shared\VMS.TPS\15.6.5.10\VMS.TPS.Common.Model.API.dll</HintPath>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types, Version=13.6.30.20230, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Shared\VMS.TPS\15.6.5.10\VMS.TPS.Common.Model.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMetric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMetric.Designer.cs">
+      <DependentUpon>AddMetric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batch.Designer.cs">
+      <DependentUpon>Batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DFHGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DFHGraph.Designer.cs">
+      <DependentUpon>DFHGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoseImageEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoseImageEdit.Designer.cs">
+      <DependentUpon>DoseImageEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelWrite.cs" />
+    <Compile Include="LoadAllSolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadAllSolution.Designer.cs">
+      <DependentUpon>LoadAllSolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadDosePlan.cs" />
+    <Compile Include="MetricAnalysis.cs" />
+    <Compile Include="MetricOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MetricOptions.Designer.cs">
+      <DependentUpon>MetricOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normalizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recalculate.Designer.cs">
+      <DependentUpon>Recalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectBioCorrection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectBioCorrection.Designer.cs">
+      <DependentUpon>SelectBioCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectOptions.Designer.cs">
+      <DependentUpon>SelectOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDoseCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDoseCourse.Designer.cs">
+      <DependentUpon>SelectDoseCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDosePlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDosePlan.Designer.cs">
+      <DependentUpon>SelectDosePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectRegistration.Designer.cs">
+      <DependentUpon>SelectRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSPECTImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSPECTImage.Designer.cs">
+      <DependentUpon>SelectSPECTImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSPECTSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSPECTSeries.Designer.cs">
+      <DependentUpon>SelectSPECTSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSPECTStudy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSPECTStudy.Designer.cs">
+      <DependentUpon>SelectSPECTStudy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StructureProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StructureProperties.Designer.cs">
+      <DependentUpon>StructureProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface.Designer.cs">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddMetric.resx">
+      <DependentUpon>AddMetric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Batch.resx">
+      <DependentUpon>Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DFHGraph.resx">
+      <DependentUpon>DFHGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoseImageEdit.resx">
+      <DependentUpon>DoseImageEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadAllSolution.resx">
+      <DependentUpon>LoadAllSolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetricOptions.resx">
+      <DependentUpon>MetricOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recalculate.resx">
+      <DependentUpon>Recalculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectBioCorrection.resx">
+      <DependentUpon>SelectBioCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectOptions.resx">
+      <DependentUpon>SelectOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDoseCourse.resx">
+      <DependentUpon>SelectDoseCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDosePlan.resx">
+      <DependentUpon>SelectDosePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectRegistration.resx">
+      <DependentUpon>SelectRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectSPECTImage.resx">
+      <DependentUpon>SelectSPECTImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectSPECTSeries.resx">
+      <DependentUpon>SelectSPECTSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectSPECTStudy.resx">
+      <DependentUpon>SelectSPECTStudy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StructureProperties.resx">
+      <DependentUpon>StructureProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\Michigan_Wolverines_Block_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dose-Function Icon1.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
